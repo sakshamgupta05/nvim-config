@@ -1,9 +1,14 @@
 return {
   -- Theme
-  { "ellisonleao/gruvbox.nvim", priority = 1000 },
+  {
+    "ellisonleao/gruvbox.nvim",
+    version = false,
+    priority = 1000
+  },
   -- Status line
   {
     "nvim-lualine/lualine.nvim",
+    version = false,
     event = "VeryLazy",
     opts = function()
       return {
@@ -18,20 +23,29 @@ return {
   -- Indentation lines
   {
     "lukas-reineke/indent-blankline.nvim",
+    version = "*",
     event = { "BufReadPost", "BufNewFile" },
     opts = {
       show_trailing_blankline_indent = false,
-      -- show_current_context = false,
     },
   },
-  -- {
-  --   "Yggdroot/indentLine",
-  --   event = { "BufReadPost", "BufNewFile" },
-  -- },
+  {
+    'nvim-telescope/telescope.nvim',
+    version = "*",
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    init = function()
+      local builtin = require('telescope.builtin')
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+      vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
+      vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+      vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+      vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+    end,
+  },
   -- Syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
-    version = false,
+    version = "*",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
