@@ -35,7 +35,7 @@ return {
            end
          end,
       },
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'williamboman/mason-lspconfig.nvim' },
 
       -- Autocompletion
       {'hrsh7th/nvim-cmp'},
@@ -51,9 +51,22 @@ return {
         lsp.default_keymaps({buffer = bufnr})
       end)
 
+      require("lspconfig").dartls.setup({
+        cmd = { "dart", "language-server", "--protocol=lsp" },
+      })
+
       lsp.setup()
     end,
-  }
+  },
+  -- NOTE: Can be used as flutter LSP
+  -- {
+  --   'akinsho/flutter-tools.nvim',
+  --   -- lazy = false,
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --   },
+  --   config = true,
+  -- }
   -- NOTE: For project level settings
   -- https://github.com/folke/neoconf.nvim
 }
