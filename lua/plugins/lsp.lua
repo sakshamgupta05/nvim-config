@@ -45,9 +45,14 @@ return {
     config = function(_, _)
       local lsp = require('lsp-zero').preset({})
 
-      lsp.on_attach(function(_, bufnr)
+      lsp.on_attach(function(client, bufnr)
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
+
+        -- Enable format on save
+        client.server_capabilities.documentFormattingProvider = true
+        vim.api.nvim_create_autocmd("BufWritePre", { callback = function() vim.lsp.buf.format() end })
+
         lsp.default_keymaps({buffer = bufnr})
       end)
 

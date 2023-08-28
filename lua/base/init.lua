@@ -17,7 +17,6 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.ai = true -- Auto indent
 vim.opt.si = true -- Smart indent
-vim.opt.wrap = false
 vim.opt.backspace = 'start,eol,indent'
 vim.opt.cursorline = true
 vim.opt.nu = true
@@ -31,3 +30,4 @@ else
   require('base.os.linux')
 end
 
+vim.lsp.buf.format({ async = true })
