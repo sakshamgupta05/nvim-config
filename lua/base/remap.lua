@@ -21,6 +21,11 @@ keymap.set('n', '<Leader><space>', ':nohlsearch<CR>', { silent = true })
 -- Select all
 keymap.set('n', '<Leader>a', 'gg<S-v>G')
 
+-- LSP
+keymap.set('n', '<Leader>k', vim.lsp.buf.hover)
+keymap.set('n', '<Leader>gd', vim.lsp.buf.definition)
+keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action)
+
 
 
 ----
