@@ -39,3 +39,6 @@ keymap.set('n', '<leader>todo', ':TodoTelescope keywords=TODO,FIXME<CR>')
 --- Mason
 -- Open mason
 keymap.set('n', '<leader>cm', '<cmd>Mason<cr>')
+
+--- Gitsigns
+keymap.set('n', '<leader>hp', ':Gitsigns preview_hunk_inline<CR>')
