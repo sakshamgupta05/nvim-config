@@ -33,7 +33,7 @@ keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action)
 ----
 
 --- todo-comments.nvim
--- Show TODO in telescope
+-- Show Todo in telescope
 keymap.set('n', '<leader>todo', ':TodoTelescope keywords=TODO,FIXME<CR>')
 
 --- Mason
