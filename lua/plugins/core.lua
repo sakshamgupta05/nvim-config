@@ -1,9 +1,6 @@
 return {
   -- File system explorer
-  {
-    "tpope/vim-vinegar",
-    version = false,
-  },
+  { "tpope/vim-vinegar" },
   -- Indentation lines
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -76,15 +73,13 @@ return {
     end,
   },
   -- Comment stuff out
-  {
-    "tpope/vim-commentary",
-    version = false,
-  },
+  { "tpope/vim-commentary" },
+  -- End certain structures
+  { "tpope/vim-endwise" },
+  -- Quoting / parenthesizing
+  { "tpope/vim-surround" },
   -- Auto matching for brackets
-  {
-    "jiangmiao/auto-pairs",
-    version = false,
-  },
+  { "jiangmiao/auto-pairs" },
   -- Git gutter, diff, commands, etc.
   {
     "lewis6991/gitsigns.nvim",

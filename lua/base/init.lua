@@ -11,6 +11,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.tabstop = TAB_WIDTH
+vim.opt.softtabstop = TAB_WIDTH
 vim.opt.shiftwidth = TAB_WIDTH
 vim.opt.expandtab = true
 vim.opt.splitbelow = true
@@ -22,6 +23,7 @@ vim.opt.cursorline = true
 vim.opt.nu = true
 vim.opt.rnu = true
 vim.opt.termguicolors = true
+vim.opt.colorcolumn = "80"
 
 -- OS Configs
 if vim.loop.os_uname().sysname == "Darwin" then

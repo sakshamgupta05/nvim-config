@@ -2,7 +2,6 @@ return {
   -- Theme
   {
     "ellisonleao/gruvbox.nvim",
-    version = false,
     priority = 1000,
     config = function(_, _)
       vim.opt.background = "dark"
@@ -12,7 +11,6 @@ return {
   -- Status line
   {
     "nvim-lualine/lualine.nvim",
-    version = false,
     event = "VeryLazy",
     opts = function()
       return {
