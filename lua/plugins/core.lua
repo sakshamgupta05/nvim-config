@@ -98,7 +98,11 @@ return {
   -- Quoting / parenthesizing
   { "tpope/vim-surround" },
   -- Auto matching for brackets
-  { "jiangmiao/auto-pairs" },
+  {
+    'windwp/nvim-autopairs',
+    -- event = "InsertEnter",
+    opts = {},
+  },
   -- Git gutter, diff, commands, etc.
   {
     "lewis6991/gitsigns.nvim",
