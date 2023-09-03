@@ -32,6 +32,7 @@ keymap.set('n', '<Leader>a', 'gg<S-v>G')
 -- LSP
 keymap.set('n', '<Leader>k', vim.lsp.buf.hover)
 keymap.set('n', '<Leader>gd', vim.lsp.buf.definition)
+keymap.set('n', '<Leader>gD', "<cmd>tab split | lua vim.lsp.buf.definition()<CR>")
 keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action)
 
 -- Delete without copy
