@@ -98,7 +98,7 @@ return {
   -- Quoting / parenthesizing
   {
     "kylechui/nvim-surround",
-    version = "*",   -- Use for stability; omit to use `main` branch for the latest features
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup({
@@ -130,5 +130,20 @@ return {
       word_diff          = false, -- Toggle with `:Gitsigns toggle_word_diff`
       current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
     }
+  },
+  {
+    'Wansmer/treesj',
+    event = "VeryLazy",
+    keys = {
+      {
+        "<leader>m",
+        "<CMD>TSJToggle<CR>",
+        desc = "Toggle Treesitter Join",
+      },
+    },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    opts = {
+      use_default_keymaps = false
+    },
   }
 }
