@@ -87,11 +87,26 @@ return {
           end
         })
 
+        -- TODO: Disable specific error codes
+        -- https://stackoverflow.com/a/70294761
+        -- require('nvim-lsp-ts-utils').setup({
+        --   filter_out_diagnostics_by_code = { 80001 },
+        -- })
+        -- require('nvim-lsp-ts-utils').setup_client(client)
+
         lsp.default_keymaps({ buffer = bufnr })
       end)
 
       require("lspconfig").dartls.setup({
         cmd = { "dart", "language-server", "--protocol=lsp" },
+      })
+
+      require("lspconfig").tsserver.setup({
+        init_options = {
+          preferences = {
+            disableSuggestions = true,
+          },
+        },
       })
 
       lsp.setup()
