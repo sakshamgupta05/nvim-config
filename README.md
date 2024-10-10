@@ -24,3 +24,28 @@ Enjoy!
 
 Plugins reference
 https://www.lazyvim.org/
+
+## To uninstall nvim completely
+
+```sh
+rm -rf .local/share/nvim
+brew uninstall neovim
+```
+
+## GCC setup for treesitter on mac
+
+```
+# Check ouput of following commands. If clang is being used, go to the next step.
+gcc --version
+g++ --version
+
+# Install gcc
+brew install gcc
+cd /opt/homebrew/bin
+ln -s ./gcc-14 gcc
+ln -s ./g++-14 g++
+
+# These should now point to gcc
+gcc --version
+g++ --version
+```

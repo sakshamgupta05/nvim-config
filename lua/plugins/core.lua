@@ -59,6 +59,7 @@ return {
       },
     },
     config = function(_, opts)
+      require("nvim-treesitter.install").compilers = {"gcc"}
       if type(opts.ensure_installed) == "table" then
         local added = {}
         opts.ensure_installed = vim.tbl_filter(function(lang)
