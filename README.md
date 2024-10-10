@@ -8,7 +8,7 @@ My Neovim configuration
 **2.** Clone the repo to `~/.config/nvim`
 ```sh
 $ mkdir ~/.config
-$ git clone https://github.com/sakshamgupta05/vim-config.git ~/.config/nvim
+$ git clone https://github.com/sakshamgupta05/nvim-config.git ~/.config/nvim
 ```
 
 **3.** Install [ripgrep](https://github.com/BurntSushi/ripgrep) for live_grep in telescope plugin
