@@ -49,3 +49,11 @@ ln -s ./g++-14 g++
 gcc --version
 g++ --version
 ```
+
+## Aliases
+
+```sh
+alias vi="nvim"
+alias vim="nvim"
+alias e="nvim ."
+```

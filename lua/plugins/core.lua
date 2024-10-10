@@ -6,9 +6,10 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     version = "*",
     event = { "BufReadPost", "BufNewFile" },
-    opts = {
-      show_trailing_blankline_indent = false,
-    },
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
   },
   {
     'nvim-telescope/telescope.nvim',
